@@ -1,5 +1,6 @@
 #div1
 {
+	position: absolute
 	width: 100%
 	height: 100%
 	background-color: gainsboro
@@ -7,6 +8,8 @@
 
 #div1-1
 {
+	display: block
+	position: relative
 	width: 90%
 	height: 200px
 	background-color: DarkSeaGreen
@@ -14,6 +17,8 @@
 
 #div1-2
 {
+	display: block
+	position: relative
 	width: 90%
 	height: 1000px
 	background-color: DarkSlateGrey
