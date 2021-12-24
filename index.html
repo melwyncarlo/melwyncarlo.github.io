@@ -1,19 +1,772 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/div_styling.css">
+		<link rel="stylesheet" type="text/css" href="styles/media_queries.css">
 		<link rel="stylesheet" type="text/css" href="styles/main_styling.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="scripts/main_script.js"></script>
+
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 
 	<body>
+
 		<div id="div1">
-			<div id="div1-1">
-				<img id="mainphoto" src="images/mfc_personal_photo.png" alt="Sorry! This image is not available at the moment.">
+
+			<ul class="nav nav-tabs nav-justified" id="navbar" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#about-tab" onclick="tab_clicked('about')">
+						About<br>Melwyn
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#ed-tab">Engineering<br>Design</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#cfdfea-tab">CFD / FEA<br>Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#scixcos-tab">Scilab / XCos<br>Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#engproj-tab">Engineering<br>Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#comproj-tab" onclick="tab_clicked('comproj')">
+						Computing<br>Projects
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#hobint-tab">Hobbies &<br>Interests</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#contact-tab" onclick="tab_clicked('contact')">
+						Contact<br>Melwyn
+					</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+
+				<div id="about-tab" class="container-fluid tab-pane fade"><br>
+
+					<div class="row rounded-top" id="div1-1">
+						<div class="col-auto" id="div1-1-1">
+							<img class="img-responsive" id="main-photo" src="images/mfc_personal_photo.png" draggable="false" alt="Sorry! No image available at the moment.">
+						</div>
+						<div class="col-auto" id="div1-1-2"></div>
+						<div class="col" id="div1-1-3">
+							<table class="table table-borderless text-left pb-3">
+								<thead class="text-center">
+									<tr>
+										<th id="main-name" colspan="3">
+											MELWYN <span id="dash">-</span> FRANCIS <span id="dash">-</span> CARLO<hr id="main-hr">
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="profile-table-1">Date of Birth</td>
+										<td class="profile-table-2">:</td>
+										<td class="profile-table-3">30 September, 1996 (24&nbsp;years)</td>
+									</tr>
+									<tr>
+										<td class="profile-table-1">Location</td>
+										<td class="profile-table-2">:</td>
+										<td class="profile-table-3">Mumbai, MH, India &nbsp;&nbsp;<a href="https://en.wikipedia.org/wiki/Mumbai" target="_blank">🇮🇳</a></td>
+									</tr>
+									<tr>
+										<td class="profile-table-1">Lincenses</td>
+										<td class="profile-table-2">:</td>
+										<td class="profile-table-3">Ham Radio General Grade (Advanced)</td>
+									</tr>
+									<tr>
+										<td class="profile-table-1">Competitive Exams</td>
+										<td class="profile-table-2">:</td>
+										<td class="profile-table-3">GRE &nbsp; &nbsp;&nbsp;&nbsp;[ Score : 300/340 ]<br>GATE &nbsp;&nbsp;&nbsp;[ Rank : #100 ; &nbsp;Percentile : 99th ]</td>
+									</tr>
+									<tr>
+										<td class="profile-table-1">Human Languages</td>
+										<td class="profile-table-2">:</td>
+										<td class="profile-table-3">English, Hindi, Konkani, Marathi,<br>French & German</td>
+									</tr>
+									<tr>
+										<td class="profile-table-1">Fictional Languages</td>
+										<td class="profile-table-2">:</td>
+										<td class="profile-table-3">Wizadry Spells in Latin & Klingon</td>
+									</tr>
+									<tr>
+										<td class="profile-table-1">Computing Languages</td>
+										<td class="profile-table-2">:</td>
+										<td class="profile-table-3">C, C++, Bash (Shell), JS, Python, Matlab,<br>Scilab, HTML, CSS, PHP, ADA,<br>Assembly Code & Machine Code</td>
+									</tr>
+									<tr>
+										<td class="profile-table-1"> &nbsp;</td>
+										<td class="profile-table-2"> </td>
+										<td class="profile-table-3"> </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row" id="div1-2"></div> 
+					<div class="row" id="div1-3">
+						<div class="col">
+                            <br>
+                            The following are my favourite software:
+                            <table>
+                                <tr>
+                                    <th>Software name</th>
+                                    <th>Purpose</th>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://en.wikipedia.org/wiki/Gedit" target="_blank">Gedit</a></td>
+                                    <td>Note-taking and developing (all programming languages).</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://typora.io" target="_blank">Typora</a></td>
+                                    <td>Diary writing, using rich-text markdown.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="http://lilypond.org/" target="_blank">Lilypond</a> and <a src="https://www.frescobaldi.com/en" target="_blank">Frescobaldi</a></td>
+                                    <td>Composing music, and compiling it into PDF and MIDI formats.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://www.libreoffice.org/" target="_blank">LibreOffice</a></td>
+                                    <td>LibreWriter, LibreCalc, LibreImpress, and LibreBase as substitutes for MS-Word, MS-Excel, and MS-PowerPoint, and MS-Access respectively; LibreDraw for developing custom SVG images.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://www.audacityteam.org/download/" target="_blank">Audacity</a></td>
+                                    <td>Audio editing.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://kdenlive.org/en/" target="_blank">Kdenlive</a></td>
+                                    <td>Video creation and editing.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://www.freecadweb.org/" target="_blank">FreeCAD</a></td>
+                                    <td>Designing 3D solid models.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://www.scilab.org/" target="_blank">Scilab and XCos</a></td>
+                                    <td>Substitutes for MATLAB AND Simulink, respectively.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://www.freeplane.org/wiki/index.php/Home" target="_blank">Freeplane</a></td>
+                                    <td>Drawing mind-maps for brainstorming and planning purposes.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       <a src="https://www.eclipse.org/papyrus/index.php" target="_blank">Eclipse Papyrus</a>
+                                       and
+                                       <a src="https://plantuml.com/" target="_blank">Plant UML</a>
+                                    </td>
+                                    <td>
+                                       <a src="https://en.wikipedia.org/wiki/Unified_Modeling_Language" target="_blank">UML</a>
+                                       and
+                                       <a src="https://en.wikipedia.org/wiki/Systems_Modeling_Language" target="_blank">SysML</a>
+                                       Diagrams
+                                       </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       <a src="https://www.diagrams.net/" target="_blank">Diagrams.net (formerly draw.io)</a>
+                                       and
+                                       <a src="https://wiki.gnome.org/Apps/Dia/" target="_blank">Dia</a>
+                                    </td>
+                                    <td>
+                                       Flowcharts and block diagrams.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://www.scilab.org/" target="_blank">Android SDK</a></td>
+                                    <td>Develop Android mobile phone applications, using Kotlin.</td>
+                                </tr>
+                                <tr>
+                                    <td><a src="https://www.scilab.org/" target="_blank">OpenJDK</a></td>
+                                    <td>Compile and execute Java code.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       <a src="https://glade.gnome.org/" target="_blank">Gnome Glade</a>/
+                                       <a src="https://gluonhq.com/products/scene-builder/" target="_blank">Gluon SceneBuilder</a>
+                                    </td>
+                                    <td>
+                                       GUI desktop applications development. Glade is for Linux apps, written in C, using the GTK3 library.
+                                       SceneBuilder is for cross-platform apps, written in Java, using the JavaFX library.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       <a src="https://superset.apache.org/" target="_blank">Apache Superset</a>/
+                                       <a src="https://www.tableau.com/" target="_blank">Tableau</a>
+                                    </td>
+                                    <td>
+                                       Business Intelligence (BI), Data Exploration and Data Visualisation.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+						<div class="col">.col</div>
+						<div class="col">.col</div>
+					</div> 
+
+				</div>
+
+
+				<div id="engproj-tab" class="container tab-pane active"><br>
+					<div class="card" id="engproj-div-1-1">
+						<div class="card-header" id="engproj-div-1-1-1" data-toggle="collapse" data-target="#engproj-div-1-1-2">
+							<div class="d-flex">
+								<div class="p-2" id="engproj-div-1-1-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">
+									Bi-Conic Sections Intersection<br>
+									<span class="badge badge-success">Algebraic Geometry</span>
+									<span class="badge badge-success">Computational Geometry</span>
+									<span class="badge badge-success">C++</span>
+								</div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 1</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="engproj-div-1-1-2">
+							<div class="card-body">
+								I took the initiative to solve the intersection problem to resolve the LibreCAD issue #1459, titled 
+								<a href="https://github.com/LibreCAD/LibreCAD/issues/1459" target="_blank">
+									'<i>Elipse center with 3 points causes freeze when choosing second point</i>'
+								</a>. Looking into the source code, I came upon an unknown author's <i>TODO</i> comment with regards to 
+								another LibreCAD issue #484, titled 
+								<a href="https://github.com/LibreCAD/LibreCAD/issues/484" target="_blank">
+									'<i>Circles, the "Snap Intersection" does not work for large coordinates</i>'
+								</a>. The comment basically stresses the need for an improved conics intersection solver. 
+								This would make redundant other specific solvers for calculating intersections between (any two of) 
+								circles, ellipses, arcs, etc. 
+								<br><br>
+								The problem was that the solution would fail in certain cases, which happens because 
+								the quartic solver returns no solutions, implying that the solutions lie in the complex plane. By means of simple 
+								observation, it could easily be verified that such an inference is patently incorrect. The problem, by my deduction, 
+								was due to incorrect (or incomplete) conversion of two conic equations into a single, univariate quartic equation.
+								<br><br>
+								Furthermore, I did not think about this earlier, but it turns out that this concept can also be applied in the field of 
+								space dynamics to estimate where two astronomical bodies or satellites (in their respective trajectories (or orbits)), 
+								would (or could) eventually meet.
+								<hr>
+								Two dimensional (2D) conic sections are contours generated as a result of a three dimensional (3D) cone and a 
+								two dimensional (2D) plane intersecting each other. Conic sections are co-planar on the intersecting plane. 
+								Specific conic sections include ellipses, circles (specific case of ellipses), parabolas, and hyperbolas. 
+								<br><br>
+								The equation for a generic conic section is as follows : &nbsp; \(C = ax^2 + bxy + cy^2 + dx + ey + f = 0\)
+								<br><br>
+								The intersection points of any two given conic sections are obtained by solving their simultaneous equations :
+								<br>
+								(Note that the term \(e\) is an arbitrary coefficient, and not <i>Euler's number</i>.)
+								<br>
+								\[C_1 = a_1x^2 + b_1xy + c_1y^2 + d_1x + e_1y + f_1 = 0\]
+								\[C_2 = a_2x^2 + b_2xy + c_2y^2 + d_2x + e_2y + f_2 = 0\]
+								<br>
+								Let us consider two ellipses (just for the purpose of understanding intersections; 
+								the solution to the above <i>generic</i> problem will remain <i>generic</i>).
+								<br>
+								The six possible cases of solutions are as follows. 
+								<br><br>
+								<table id="ellipses-intersection-table">
+									<thead>
+										<tr>
+											<th>Sr. No.</th>
+											<th>Case</th>
+											<th>Illustration</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1.</td>
+											<td>No intersection</td>
+											<td>
+												<svg height="100" width="275">
+													<ellipse cx="75" cy="50" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<ellipse cx="200" cy="50" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+												</svg>
+											</td>
+										</tr>
+										<tr>
+											<td>2.A.</td>
+											<td>One intersection</td>
+											<td>
+												<svg height="100" width="275">
+													<ellipse cx="87.5" cy="50" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<ellipse cx="187.5" cy="50" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<circle cx="137.5" cy="50" r="5" stroke-width="0" fill="red" />
+												</svg>
+											</td>
+										</tr>
+										<tr>
+											<td>2.B.</td>
+											<td>One intersection</td>
+											<td>
+												<svg height="100" width="275">
+													<ellipse cx="137.5" cy="50" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<ellipse cx="148" cy="50" rx="40" ry="15" style="fill:none;stroke:black;stroke-width:2" />
+													<circle cx="187.5" cy="50" r="5" stroke-width="0" fill="red" />
+												</svg>
+											</td>
+										</tr>
+										<tr>
+											<td>3.</td>
+											<td>Two intersections</td>
+											<td>
+												<svg height="100" width="275">
+													<ellipse cx="100" cy="50" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<ellipse cx="150" cy="50" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<circle cx="125" cy="30" r="5" stroke-width="0" fill="red" />
+													<circle cx="125" cy="70" r="5" stroke-width="0" fill="red" />
+												</svg>
+											</td>
+										</tr>
+										<tr>
+											<td>4.</td>
+											<td>Three intersections</td>
+											<td>
+												<svg height="110" width="275">
+													<ellipse cx="125" cy="55" rx="25" ry="50" style="fill:none;stroke:black;stroke-width:2" />
+													<ellipse cx="150" cy="55" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<circle cx="100" cy="55" r="5" stroke-width="0" fill="red" />
+													<circle cx="145" cy="30" r="5" stroke-width="0" fill="red" />
+													<circle cx="145" cy="80" r="5" stroke-width="0" fill="red" />
+												</svg>
+											</td>
+										</tr>
+										<tr>
+											<td>5.</td>
+											<td>Four intersections</td>
+											<td>
+												<svg height="110" width="275">
+													<ellipse cx="125" cy="55" rx="25" ry="50" style="fill:none;stroke:black;stroke-width:2" />
+													<ellipse cx="125" cy="55" rx="50" ry="25" style="fill:none;stroke:black;stroke-width:2" />
+													<circle cx="103" cy="33" r="5" stroke-width="0" fill="red" />
+													<circle cx="103" cy="77" r="5" stroke-width="0" fill="red" />
+													<circle cx="148" cy="33" r="5" stroke-width="0" fill="red" />
+													<circle cx="148" cy="77" r="5" stroke-width="0" fill="red" />
+												</svg>
+											</td>
+										</tr>
+										<tr>
+											<td>6.</td>
+											<td>Infinite intersections<br>(Coincidental)</td>
+											<td>
+												<svg height="100" width="275">
+													<ellipse cx="125" cy="50" rx="50" ry="25" style="fill:none;stroke:red;stroke-width:2" />
+												</svg>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<br><br>
+								To begin solving, let us first create re-arranged forms of the above equations ( by setting aside the \(y^2\) term ) :
+								\[Y_1^2 = y^2 = {{-a_1x^2 - b_1xy - d_1x - e_1y - f_1} \over {c_1}} = -{{a_1x^2 + b_1xy + d_1x + e_1y + f_1} \over {c_1}}\]
+								\[Y_2^2 = y^2 = {{-a_2x^2 - b_2xy - d_2x - e_2y - f_2} \over {c_2}} = -{{a_2x^2 + b_2xy + d_2x + e_2y + f_2} \over {c_2}}\]
+
+								<br>
+								Clearing the fractions, and then simplifying,
+								\[c_2(a_1x^2 + b_1xy + d_1x + e_1y + f_1) = c_1(a_2x^2 + b_2xy + d_2x + e_2y + f_2)\]
+								\[a_1c_2x^2 + b_1c_2xy + c_2d_1x + c_2e_1y + c_2f_1) = a_2c_1x^2 + b_2c_1xy + c_1d_2x + c_1e_2y + c_1f_2\]
+
+								<br>
+								Transposing all RHS terms to LHS, and then factoring, &nbsp; 
+								\[(a_1c_2 - a_2c_1)x^2 + (b_1c_2 - b_2c_1)xy + (d_1c_2 - d_2c_1)x + (e_1c_2 - e_2c_1)y + (f_1c_2 - f_2c_1) = 0\]
+
+								<br>
+								Rearranging to solve for \(y\), &nbsp; 
+								\[y = {{-(a_1c_2 - a_2c_1)x^2 - (d_1c_2 - d_2c_1)x - (f_1c_2 - f_2c_1)} \over {(b_1c_2 - b_2c_1)x + (e_1c_2 - e_2c_1)}} 
+								= -{{(a_1c_2 - a_2c_1)x^2 + (d_1c_2 - d_2c_1)x + (f_1c_2 - f_2c_1)} \over {(b_1c_2 - b_2c_1)x + (e_1c_2 - e_2c_1)}}\]
+
+								<br>
+								Simplifying the terms, 
+								\[y = {{y_{numerator}} \over {y_{denominator}}} = {{y_n} \over {y_d}} = {{a_2c_1x^2 - a_1c_2x^2 + d_2c_1x - d_1c_2x + f_2c_1 - f_1c_2} \over {b_1c_2x - b_2c_1x + e_1c_2 - e_2c_1}}\]
+								\[y^2 = {{y_n^2} \over {y_d^2}}\]
+
+								<br>
+								Upon simplifying the squares, and then factoring, we get the following equations.
+								<br><br>
+								\[\eqalign{y_n^2 &= (a_1^2c_2^2 + a_2^2c_1^2 - 2a_1a_2c_1c_2) \space x^4 \cr 
+								&+ (2a_1c_2^2d_1 + 2a_2c_1^2d_2 - 2a_1c_1c_2d_2 - 2a_2c_1c_2d_1) \space x^3 \cr 
+								&+ (2a_1c_2^2f_1 + 2a_2c_1^2f_2 + c_1^2d_2^2 + c_2^2d_1^2 - 2a_1c_1c_2f_2 - 2a_2c_1c_2f_1 - 2c_1c_2d_1d_2) \space x^2 \cr 
+								&+ (2c_1^2d_2f_2 + 2c_2^2d_1f_1 - 2c_1c_2d_1f_2 - 2c_1c_2d_2f_1) \space x \cr 
+								&+ (c_1^2f_2^2 + c_2^2f_1^2 - 2c_1c_2f_1f_2)}\]
+								<br>
+								\[\eqalign{y_d^2 &= (b_1^2c_2^2 + b_2^2c_1^2 - 2b_1b_2c_1c_2) \space x^2 \cr 
+								&+ (2b_1c_2^2e_1 + 2b_2c_1^2e_2 - 2b_1c_1c_2e_2 - 2b_2c_1c_2e_1) \space x \cr 
+								&+ (c_1^2e_2^2 + c_2^2e_1^2 - 2c_1c_2e_1e_2)}\]
+
+								<br>
+								Substituting the \(y_n\) and \(y_d\) terms into one of the conic sections, say, \(C_1\), we get the following equation.
+								\[C_1 = a_1x^2 + b_1x{{y_n} \over {y_d}} + c_1{{y_n^2} \over {y_d^2}} + d_1x + e_1{{y_n} \over {y_d}} + f_1 = 0\]
+
+								<br>
+								Upon clearing the fractions, we get the following equation.
+								\[C_1 = a_1x^2y_d^2 + b_1xy_ny_d + c_1y_n^2 + d_1xy_d^2 + e_1y_ny_d + f_1y_d^2 = 0\]
+
+								<br>
+								Upon factoring, we get the following equation.
+								\[C_1 = c_1y_n^2 + (b_1x + e_1)y_ny_d + (a_1x^2 + d_1x + f_1)y_d^2 = 0\]
+
+								<br>
+								Upon expanding the \(y_n\) and \(y_d\) terms, we get the following equation.
+								\[\eqalign{C_1 &= (a_1^2c_1c_2^2 + a_2^2c_1^3 - 2a_1a_2c_1^2c_2) \space x^4 \cr 
+								&+ (2a_1c_1c_2^2d_1 + 2a_2c_1^3d_2 - 2a_1c_1^2c_2d_2 - 2a_2c_1^2c_2d_1) \space x^3 \cr 
+								&+ (2a_1c_1c_2^2f_1 + 2a_2c_1^3f_2 + c_1^3d_2^2 + c_1c_2^2d_1^2 - 2a_1c_1^2c_2f_2 - 2a_2c_1^2c_2f_1 - 2c_1^2c_2d_1d_2) \space x^2 \cr 
+								&+ (2c_1^3d_2f_2 + 2c_1c_2^2d_1f_1 - 2c_1^2c_2d_1f_2 - 2c_1^2c_2d_2f_1) \space x \cr 
+								&+ (c_1c_2^2f_1^2 + c_1^3f_2^2 - 2c_1^2c_2f_1f_2) \cr 
+								\cr 
+								&+ (a_1b_1b_2c_1c_2 + a_2b_1^2c_1c_2 - a_1b_1^2c_2^2 - a_2b_1b_2c_1^2) \space x^4 \cr 
+								&+ (a_1b_1c_1c_2e_2 + a_1b_2c_1c_2e_1 + 2a_2b_1c_1c_2e_1 + b_1^2c_1c_2d_2 + b_1b_2c_1c_2d_1 
+								 - 2a_1b_1c_2^2e_1 - a_2b_1c_1^2e_2 - a_2b_2c_1^2e_1 - b_1^2c_2^2d_1 - b_1b_2c_1^2d_2) \space x^3 \cr 
+								&+ (a_1c_1c_2e_1e_2 + a_2c_1c_2e_1^2 + b_1b_2c_1c_2f_1 + b_1c_1c_2d_1e_2 + 2b_1c_1c_2d_2e_1 + b_1^2c_1c_2f_2 + b_2c_1c_2d_1e_1 \cr 
+								& \space \space \space \space \space \space \space \space \space \space \space \space 
+								 - a_1c_2^2e_1^2 - a_2c_1^2e_1e_2 - b_1b_2c_1^2f_2 - b_1c_1^2d_2e_2 - 2b_1c_2^2d_1e_1 - b_1^2c_2^2f_1 - b_2c_1^2d_2e_1) \space x^2 \cr 
+								&+ (2b_1c_1c_2e_1f_2 + b_1c_1c_2e_2f_1 + b_2c_1c_2e_1f_1 + c_1c_2d_1e_1e_2 + c_1c_2d_2e_1^2 
+								 - b_1c_1^2e_2f_2 - 2b_1c_2^2e_1f_1 - b_2c_1^2e_1f_2 - c_1^2d_2e_1e_2 - c_2^2d_1e_1^2) \space x \cr 
+								&+ (c_1c_2e_1^2f_2 + c_1c_2e_1e_2f_1 - c_1^2e_1e_2f_2 - c_2^2e_1^2f_1) \cr 
+								\cr 
+								&+ (a_1b_1^2c_2^2 + a_1b_2^2c_1^2 - 2a_1b_1b_2c_1c_2) \space x^4 \cr 
+								&+ (2a_1b_1c_2^2e_1 + 2a_1b_2c_1^2e_2 + b_1^2c_2^2d_1 + b_2^2c_1^2d_1 - 2a_1b_1c_1c_2e_2 - 2a_1b_2c_1c_2e_1 - 2b_1b_2c_1c_2d_1) \space x^3 \cr 
+								&+ (a_1c_1^2e_2^2 + a_1c_2^2e_1^2 + b_1^2c_2^2f_1 + b_2^2c_1^2f_1 + 2b_1c_2^2d_1e_1 + 2b_2c_1^2d_1e_2 
+								 - 2a_1c_1c_2e_1e_2 - 2b_1b_2c_1c_2f_1 - 2b_1c_1c_2d_1e_2 - 2b_2c_1c_2d_1e_1) \space x^2 \cr 
+								&+ (c_1^2d_1e_2^2 + c_2^2d_1e_1^2 + 2b_1c_2^2e_1f_1 + 2b_2c_1^2e_2f_1 - 2b_1c_1c_2e_2f_1 - 2b_2c_1c_2e_1f_1 - 2c_1c_2d_1e_1e_2) \space x \cr 
+								&+ (c_1^2e_2^2f_1 + c_2^2e_1^2f_1 - 2c_1c_2e_1e_2f_1) \cr 
+								\cr 
+								&= 0}\]
+
+								<br>
+								Upon factoring the \(x^n\) terms, we get the following equation of the form \(Ax^4 + Bx^3 + Cx^2 + Dx + K = 0\), 
+								<br>
+								where \(A, B, C,\) and \(D\) are coefficients, and \(K\) is a constant.
+								\[\eqalign{& \space (a_1^2c_1c_2^2 + a_2^2c_1^3 - 2a_1a_2c_1^2c_2 
+								 + a_2b_1^2c_1c_2 - a_2b_1b_2c_1^2 
+								 + a_1b_2^2c_1^2 - a_1b_1b_2c_1c_2) \space x^4 \cr 
+								\cr 
+								&+ (2a_1c_1c_2^2d_1 + 2a_2c_1^3d_2 - 2a_1c_1^2c_2d_2 - 2a_2c_1^2c_2d_1 \cr 
+								& \space \space \space \space \space + 2a_2b_1c_1c_2e_1 + b_1^2c_1c_2d_2 - a_2b_1c_1^2e_2 - a_2b_2c_1^2e_1 - b_1b_2c_1^2d_2 \cr 
+								& \space \space \space \space \space + 2a_1b_2c_1^2e_2 + b_2^2c_1^2d_1 - a_1b_1c_1c_2e_2 - a_1b_2c_1c_2e_1 - b_1b_2c_1c_2d_1) \space x^3 \cr 
+								\cr 
+								&+ (2a_1c_1c_2^2f_1 + 2a_2c_1^3f_2 + c_1^3d_2^2 + c_1c_2^2d_1^2 - 2a_1c_1^2c_2f_2 - 2a_2c_1^2c_2f_1 - 2c_1^2c_2d_1d_2 \cr 
+								& \space \space \space \space \space + a_2c_1c_2e_1^2 + 2b_1c_1c_2d_2e_1 + b_1^2c_1c_2f_2 - a_2c_1^2e_1e_2 - b_1b_2c_1^2f_2 - b_1c_1^2d_2e_2 - b_2c_1^2d_2e_1 \cr 
+								& \space \space \space \space \space + a_1c_1^2e_2^2 + b_2^2c_1^2f_1 + 2b_2c_1^2d_1e_2 - a_1c_1c_2e_1e_2 - b_1b_2c_1c_2f_1 - b_1c_1c_2d_1e_2 - b_2c_1c_2d_1e_1) \space x^2 \cr 
+								\cr 
+								&+ (2c_1^3d_2f_2 + 2c_1c_2^2d_1f_1 - 2c_1^2c_2d_1f_2 - 2c_1^2c_2d_2f_1 \cr 
+								& \space \space \space \space \space + 2b_1c_1c_2e_1f_2 + c_1c_2d_2e_1^2 - b_1c_1^2e_2f_2 - b_2c_1^2e_1f_2 - c_1^2d_2e_1e_2 \cr 
+								& \space \space \space \space \space + c_1^2d_1e_2^2 + 2b_2c_1^2e_2f_1 - b_1c_1c_2e_2f_1 - b_2c_1c_2e_1f_1 - c_1c_2d_1e_1e_2) \space x \cr 
+								\cr 
+								&+ (c_1c_2^2f_1^2 + c_1^3f_2^2 - 2c_1^2c_2f_1f_2 
+								 + c_1c_2e_1^2f_2 - c_1^2e_1e_2f_2 
+								 + c_1^2e_2^2f_1 - c_1c_2e_1e_2f_1) \cr 
+								\cr 
+								&= 0}\]
+
+								<br>
+								This is a quartic (fourth degree) equation. The intersection abscissae (x-coordinates) are the characteristic roots of this equation.
+								A quartic equation may be solved using several methods, though the methods are categorised as either analytic or iterative.
+                        Popular examples in the two categories are the 
+                        <a href="https://en.wikipedia.org/wiki/Quartic_function#General_formula_for_roots" target="_blank">
+                           '<i>Ferrari's method</i>'
+                        </a>
+                        and the 
+                        <a href="https://en.wikipedia.org/wiki/Newton%27s_method" target="_blank">
+									'<i>Newton–Raphson method</i>'
+								</a>.
+                        <br><br>
+                        Care has to be taken to ensure that only solutions in the <i>Real Domain</i> \(( f(x) \in {\mathbb{R}} )\) 
+                        are stored, and solution in the <i>Complex Domain</i> \(( f(x) \in {\mathbb{C}} )\) are discarded/ignored. 
+                        Also, care has to be taken to ensure that there is sufficient precision while performing mathematical 
+                        operations. Relying on <i>float</i> and <i>double</i> for precision-based applications is a folly.
+
+								<!-- \[C_1 = c_1y_n^2 + (b_1x + e_1)y_ny_d + (a_1x^2 + d_1x + f_1)y_d^2 = 0\] -->
+
+								<br><br>
+								<a href="https://github.com/melwyncarlo/Bash_Header_Design" target="_blank" class="btn btn-danger visit-source-button" role="button">Visit its Source !</a><br><br>
+								<br>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div id="comproj-tab" class="container tab-pane fade"><br>
+					<div class="card" id="comproj-div-1-1">
+						<div class="card-header" id="comproj-div-1-1-1" data-toggle="collapse" data-target="#comproj-div-1-1-2">
+							<div class="d-flex">
+								<div class="p-2" id="comproj-div-1-1-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">Header Design for Linux Terminals<br><span class="badge badge-success">Bash (Shell)</span></div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 1</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="comproj-div-1-1-2">
+							<div class="card-body">
+								Two variants of heading banners can be created on a CUI (Character User Interface) Terminal. 
+								&nbsp;&nbsp;These headers can display any alpha-numeric or ASCII-based text. 
+								&nbsp;&nbsp;It's position and size can also be modified.<br><br>
+								<a href="https://github.com/melwyncarlo/Bash_Header_Design" target="_blank" class="btn btn-danger visit-source-button" role="button">Visit its Source !</a><br><br>
+								<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false" data-keyboard="false">
+									<!-- Indicators -->
+									<ol class="carousel-indicators">
+										<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+										<li data-target="#myCarousel" data-slide-to="1"></li>
+										<li data-target="#myCarousel" data-slide-to="2"></li>
+										<li data-target="#myCarousel" data-slide-to="3"></li>
+										<li data-target="#myCarousel" data-slide-to="4"></li>
+									</ol>
+
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img src="images/comproj_01_img_1.png" alt="Sorry! This image is not available at the moment." style="width:100%;">
+										</div>
+										<div class="carousel-item">
+											<img src="images/comproj_01_img_2.png" alt="Sorry! This image is not available at the moment." style="width:100%;">
+										</div>
+										<div class="carousel-item">
+											<img src="images/comproj_01_img_3.png" alt="Sorry! This image is not available at the moment." style="width:100%;">
+										</div>
+										<div class="carousel-item">
+											<img src="images/comproj_01_img_4.png" alt="Sorry! This image is not available at the moment." style="width:100%;">
+										</div>
+										<div class="carousel-item">
+											<img src="images/comproj_01_img_5.png" alt="Sorry! This image is not available at the moment." style="width:100%;">
+										</div>
+									</div>
+
+									<!-- Left and right controls -->
+									<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+								<br>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="card" id="comproj-div-2-1">
+						<div class="card-header" id="comproj-div-2-1-1" data-toggle="collapse" data-target="#comproj-div-2-1-2">
+							<div class="d-flex">
+								<div class="p-2" id="comproj-div-2-1-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">File Explorer Dialogue for Linux Terminals<br><span class="badge badge-success">Bash (Shell)</span></div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 2</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="comproj-div-2-1-2">
+							<div class="card-body">
+								Selecting a file(s) or folder(s) for using a simple CUI (Character User Interface) Terminal. 
+								&nbsp;&nbsp;This is generally used for loading, opening and saving files and folders. 
+								&nbsp;&nbsp;It can be used for other purposes too. 
+								&nbsp;&nbsp;The next project '#3' applies this very solution to supplement its other functions.<br><br>
+								<a href="https://github.com/melwyncarlo/MFC_Linux_File_Explorer" target="_blank" class="btn btn-danger visit-source-button" role="button">Visit its Source !</a><br><br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SLeywKRBZaw?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zJQJge-337E?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="card" id="comproj-div-3-1">
+						<div class="card-header" id="comproj-div-3-1-1" data-toggle="collapse" data-target="#comproj-div-3-1-2">
+							<div class="d-flex">
+								<div class="p-2" id="comproj-div-3-1-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">Web Data Capture through a Linux Terminal<br><span class="badge badge-success">Bash (Shell)</span></div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 3</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="comproj-div-3-1-2">
+							<div class="card-body">
+								This application is meant to be used for gathering text-based information from the web. 
+								&nbsp;&nbsp;This application primarily applies to static websites. The data can be updated after a specified duration. 
+								&nbsp;&nbsp;On unavailability of data, the stored (cached) data can be used instead, where applicable. 
+								&nbsp;&nbsp;Furthermore, the downloaded data is stripped of its HTML tags, while removing numerical data and punctuations is optional.<br><br>
+								<a href="https://github.com/melwyncarlo/Bash_Web_Data_Capture" target="_blank" class="btn btn-danger visit-source-button" role="button">Visit its Source !</a><br><br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c8e2Hg5auL8?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C4jqBM73_h8?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="card" id="comproj-div-4-1">
+						<div class="card-header" id="comproj-div-4-1-1" data-toggle="collapse" data-target="#comproj-div-4-1-2">
+							<div class="d-flex">
+								<div class="p-2" id="comproj-div-4-1-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">Data Backup in a Linux Operating System<br><span class="badge badge-success">Bash (Shell)</span></div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 4</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="comproj-div-4-1-2">
+							<div class="card-body">
+								This application backs up folders onto an external media device. &nbsp;&nbsp;The data may be backed up in a compressed or uncompressed format. 
+								Provisions have been made, for advanced users, to backup at the click of a button, with settings being pre-defined 
+								by the user itself (the Lite version). &nbsp;&nbsp;The orginal version, on the other hand, works in the interative mode. 
+								&nbsp;&nbsp;This application also creates logs for further observation. &nbsp;&nbsp;Furthermore, the application can be installed and 
+								uninstalled using a set of commands mentioned in the 'README' file, available at its 'Source'.<br><br>
+								<a href="https://github.com/melwyncarlo/MFC_Ubuntu_Data_Backup" target="_blank" class="btn btn-danger visit-source-button" role="button">Visit its Source !</a><br><br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EkJtuB8cnw4?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/M-TJOjE9TIg?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Lk16USxugpY?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+								<div class="embed-responsive embed-responsive-21by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uysPS2rD1D0?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<br>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<div id="contact-tab" class="container tab-pane fade"><br>
+					<div class="row" id="contact-div-1-1">
+						<div class="col-auto rounded-top" id="contact-div-1-1-1">
+							To &nbsp;&nbsp;CONTACT &nbsp;&nbsp;or &nbsp;&nbsp;to seek references &nbsp;&nbsp;for &nbsp;&nbsp;verification of claims :
+						</div>
+						<div class="col-auto" id="contact-div-1-1-2"></div>
+						<div class="col-auto" id="contact-div-1-1-3"></div>
+						<div class="col rounded-bottom" id="contact-div-1-1-4">
+							<table class="table table-borderless text-left pb-3">
+								<tbody>
+									<tr>
+										<td class="contact-table-1">TELEPHONE</td>
+										<td class="contact-table-2">:</td>
+										<td class="contact-table-3">+ 9 1 - 9 1 6 7 0 8 8 0 7 8</td>
+										<td class="contact-table-4 align-text-top">
+											<button type="button" class="btn btn-dark" id="copy-button" onclick="func_copy('00919987074296')">Copy to Clipboard</button>
+											(Whatsapp Enabled)
+										</td>
+									</tr>
+									<tr>
+										<td class="contact-table-1">EMAIL</td>
+										<td class="contact-table-2">:</td>
+										<td class="contact-table-3">melwyncarlo@gmail.com</td>
+										<td class="contact-table-4 align-text-top">
+											<button type="button" class="btn btn-dark" id="copy-button" onclick="func_copy('melwyncarlo@gmail.com')">Copy to Clipboard</button>
+											(Priority Mail)
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">carlo.melwyn@outlook.com</td>
+										<td class="contact-table-4 align-text-top">
+											<button type="button" class="btn btn-dark" id="copy-button" onclick="func_copy('carlo.melwyn@outlook.com')">Copy to Clipboard</button>
+											(Conventional Mail)
+										</td>
+									</tr>
+									<tr><td class="contact-table-1"> &nbsp;</td></tr>
+									<tr>
+										<td class="contact-table-1">SOCIAL MEDIA</td>
+										<td class="contact-table-2">:</td>
+										<td class="contact-table-3">LinkedIn</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="https://uk.linkedin.com/in/melwyncarlo" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">GitHub</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="https://github.com/melwyncarlo/" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">StackOverflow</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="#" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">Make : Projects</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="#" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">DevianArt</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="#" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">GoodReads</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="https://www.16personalities.com/profiles/eedb86891c5c1" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">16Personalities</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="#" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+									<tr>
+										<td></td><td></td>
+										<td class="contact-table-3 align-middle">Gentlemint</td>
+										<td class="contact-table-4 align-text-top">
+											<a href="#" target="_blank" class="btn btn-link visit-profile" role="button">◄◄ &nbsp; &nbsp;&nbsp;Visit Profile  &nbsp;&nbsp;&nbsp;►►</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row rounded" id="contact-div-1-2" onclick="cv_button_clicked()">
+						<div class="col text-center justify-content-center align-self-center" id="contact-div-1-2-1">
+							CLICK - HERE &nbsp;&nbsp;to view the &nbsp;&nbsp;'Curriculum - Vitae'
+						</div>
+					</div>
+				</div>
+
 			</div>
-			<div id="div1-2">
-			</div>
+
 		</div>
-	<body>
+
+	</body>
 
 </html>

@@ -1,0 +1,28 @@
+@media screen and (max-width: 600px)
+{
+	#main-name
+	{
+		padding-top: 20% !important;
+		padding-left: 5% !important;
+	}
+
+	.profile-table-1
+	{
+		padding-bottom: 5% !important;
+	}
+
+	#div1-1
+	{
+		background-image: url("../images/board.jpg") !important;
+	}
+
+	#div1-1-1
+	{
+		visibility: hidden;
+	}
+
+	#div1-1-2
+	{
+		visibility: hidden;
+	}
+}

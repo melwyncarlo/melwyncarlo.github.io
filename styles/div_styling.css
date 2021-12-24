@@ -1,25 +1,251 @@
 #div1
 {
-	position: absolute
-	width: 100%
-	height: 100%
-	background-color: gainsboro
+	/*display: block;
+	position: absolute;
+	margin: -10;
+	padding: 0;*/
+	padding: 15px;
+	/*width: 100%;*/
+	/*min-width: 100%;
+	min-height: 100%;*/
+	background-color: #2B7A78;	/*222629	17252A	19. EAE7DC*/
+	/*text-align: center;*/
+
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10+ and Edge */
+	user-select: none; /* Standard syntax */
 }
 
 #div1-1
 {
-	display: block
-	position: relative
-	width: 90%
-	height: 200px
-	background-color: DarkSeaGreen
+	/*display: block;
+	position: relative;*/
+	margin: 0 auto;
+	width: 100%;
+	/*height: 500px;*/
+	background-image: url("../images/board.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	pointer-events: none;
+}
+
+#div1-1-1
+{
+	/*display: block;
+	position: relative;
+	margin: 0 auto;
+	float: left;*/
+	padding-left: 2%;
+	width: 40%;
+}
+
+#div1-1-2
+{
+	width: 5%;
+}
+
+#div1-1-3
+{
+	/*display: block;
+	position: relative;
+	margin: 0 auto;
+	float: left;
+	width: 60%;
+	height: 100%;*/
+	color: gainsboro;
+	padding-left: 5%;
+	right: 2.5%;
+	top: 7.5%;
+}
+
+#div1-1-2-1
+{
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	float: left;
+	width: 100%;
+	height: 25%;
+}
+
+#div1-1-2-2
+{
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	float: left;
+	width: 100%;
+	height: 75%;
 }
 
 #div1-2
 {
-	display: block
-	position: relative
-	width: 90%
-	height: 1000px
-	background-color: DarkSlateGrey
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 25px;
+	background-image: linear-gradient(#101010 15%, DarkSlateGrey);
 }
+
+#div1-3
+{
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 1000px;
+	background-color: DarkSlateGrey;	
+}
+
+#contact-div-1-1
+{
+	margin: 0 auto;
+	width: 100%;
+}
+
+#contact-div-1-1-1
+{
+	/*display: block;
+	position: relative;*/
+	margin: 0 auto;
+	width: 100%;
+	padding: 15px 30px;
+	color: cornsilk;
+	background-color: #101010; /*1F1212*/
+	font-family: Alegreya-Bold;
+	font-size: 125%;
+	border: 2px solid black;
+	border-bottom: 1px solid black;
+}
+
+#contact-div-1-1-2
+{
+	/*display: block;
+	position: relative;*/
+	margin: 0 auto;
+	width: 100%;
+	height: 450px;
+	background-image: url("../images/contact_image.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#contact-div-1-1-3
+{
+	/*display: block;
+	position: relative;*/
+	margin: 0 auto;
+	width: 100%;
+	height: 25px;
+	background-image: linear-gradient(#101010 15%, lightgrey);
+	border: 2px solid black;
+	border-top-style: none;
+	border-bottom-style: none;
+}
+
+#contact-div-1-1-4
+{
+	/*display: block;
+	position: relative;*/
+	margin: 0 auto;
+	width: 100%;
+	padding: 15px 20px;
+	padding-top: 25px;
+	background-color: gainsboro;/*#cfaeae; $#E3C5AA;*/
+	font-family: Alegreya-Regular;
+	font-size: 125%;
+	border: 2px solid #170b0b;
+	border-top-style: none;
+}
+
+#contact-div-1-2
+{
+	margin: 25px auto;
+	width: 100%;
+	color: cornsilk;
+	background-color: #101010; /*1F1212*/
+	border: 3px solid black;
+	cursor: pointer;
+}
+
+#contact-div-1-2:hover
+{
+	background-color: #080808;
+}
+
+#contact-div-1-2:active
+{
+	background-color: #050505;
+}
+
+#contact-div-1-2-1
+{
+	display: flex;
+	align-items: center;
+	padding: 15px 0px;
+	color: gainsboro;
+	font-family: Alegreya-Bold;
+	font-size: 125%;
+}
+
+#comproj-div-1-1, #comproj-div-2-1, #comproj-div-3-1, #comproj-div-4-1
+{
+	margin: 0 auto;
+	padding: 0;
+	border-style: none;
+	background-color: transparent;
+	width: 100%;
+	
+}
+
+#comproj-div-1-1-1, #comproj-div-2-1-1, #comproj-div-3-1-1, #comproj-div-4-1-1
+{
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 100%;
+	padding: 15px 30px;
+	color: gainsboro;
+	background-color: #1F1212;
+	font-family: Alegreya-Bold;
+	font-size: 125%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	cursor: pointer;
+}
+
+#comproj-div-1-1-1-arrow, #comproj-div-2-1-1-arrow, #comproj-div-3-1-1-arrow, #comproj-div-4-1-1-arrow
+{
+	display: none;
+}
+
+#comproj-div-1-1-1:hover #comproj-div-1-1-1-arrow,
+#comproj-div-2-1-1:hover #comproj-div-2-1-1-arrow,
+#comproj-div-3-1-1:hover #comproj-div-3-1-1-arrow,
+#comproj-div-4-1-1:hover #comproj-div-4-1-1-arrow
+{
+	display: initial;
+}
+
+#comproj-div-1-1-1, #comproj-div-2-1-1, #comproj-div-3-1-1, #comproj-div-4-1-1
+{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#comproj-div-1-1-2, #comproj-div-2-1-2, #comproj-div-3-1-2, #comproj-div-4-1-2
+{
+	width: 100%;
+	color: black;
+	background-color: lightgreen;
+	font-family: Alegreya-Regular;
+	font-size: 120%;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+
+

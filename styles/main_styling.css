@@ -1,5 +1,236 @@
-#mainphoto
+@font-face
 {
-	width: 40%
-	height: 90%
+	font-family: KGTenThousandReasons;
+	src: url(../fonts/KGTenThousandReasons.ttf);
 }
+
+@font-face
+{
+	font-family: Charcoal;
+	src: url(../fonts/Charcoal.otf);
+}
+
+@font-face
+{
+	font-family: Alegreya-Black;
+	src: url(../fonts/Alegreya-Black.ttf);
+}
+
+@font-face
+{
+	font-family: Alegreya-Bold;
+	src: url(../fonts/Alegreya-Bold.ttf);
+}
+
+@font-face
+{
+	font-family: Alegreya-BoldItalic;
+	src: url(../fonts/Alegreya-BoldItalic.ttf);
+}
+
+@font-face
+{
+	font-family: Alegreya-Italic;
+	src: url(../fonts/Alegreya-Italic.ttf);
+}
+
+@font-face
+{
+	font-family: Alegreya-Regular;
+	src: url(../fonts/Alegreya-Regular.ttf);
+}
+
+
+/*table
+{
+	table-layout: auto;
+	max-width: 95%;
+	max-height: 95%;
+}
+
+td
+{
+	word-wrap: break-word;
+}*/
+
+tr td
+{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#main-photo
+{
+	/*display: block;
+	position: relative;
+	bottom: 0%;*/
+	height: 90%;
+	position: absolute;
+	bottom: 0;
+}
+
+#main-name
+{
+	font-family: Charcoal;
+	font-size: 250%;
+	padding-top: 7.5%;
+}
+
+#main-hr
+{
+	border: 1px solid gainsboro;
+}
+
+.profile-table-1
+{
+	/*position: relative;*/
+	font-family: Alegreya-Bold;
+	font-size: 120%;
+	width: 40%;
+	padding-left: 5% !important;
+}
+
+.profile-table-2
+{
+	width: 4%;
+}
+
+.profile-table-3
+{
+	/*position: relative;*/
+	font-family: Alegreya-Regular;
+	font-size: 120%;
+	pointer-events: auto;
+}
+
+#ellipses-intersection-table
+{
+	margin: 0 auto;
+	padding: 10px 50px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+#ellipses-intersection-table th
+{
+	padding: 10px 50px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+#ellipses-intersection-table td
+{
+	padding: 10px 20px !important;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.contact-table-1
+{
+	/*position: relative;*/
+	width: 20%;
+	padding-top: 5px !important;
+	font-family: Alegreya-Bold;
+}
+
+.contact-table-2
+{
+	width: 4%;
+}
+
+.contact-table-3
+{
+	/*position: relative;*/
+	width: 30%;
+	padding-top: 10px !important;
+	font-family: KGTenThousandReasons;
+	font-size: 90%;
+}
+
+.contact-table-4
+{
+	/*position: relative;*/
+	font-family: Alegreya-Italic;
+}
+
+#copy-button
+{
+	padding: 5px 20px;
+	margin: 5px 20px;
+	font-family: Alegreya-Regular;
+	font-size: 100%;
+}
+
+.visit-profile
+{
+	color: black !important;
+	background-color: transparent !important;
+	font-family: Alegreya-Regular !important;
+	font-size: 100% !important;
+}
+
+.visit-profile:hover
+{
+	color: gainsboro !important;
+	background-color: #23272B !important;
+}
+
+.visit-profile:active
+{
+	color: gainsboro !important;
+	background-color: #1D2124 !important;
+}
+
+#dash
+{
+	font-family: Alegreya-Bold;
+}
+
+.proj-numbering
+{
+	color: darkgrey;
+}
+
+.visit-source-button
+{
+	font-family: Alegreya-Bold;
+	font-weight: bold;
+}
+
+#navbar
+{
+	padding: 0 !important;
+}
+
+.nav-item
+{
+	background-color: #2B7A78 !important;
+}
+
+.nav-link
+{
+	color: black !important;
+	/*border-bottom: 1px solid #202020 !important;*/
+}
+
+.nav-link:hover
+{
+	border-color: #121212 !important;
+	font-weight: bold !important;
+}
+
+.nav-link.active
+{
+	border-color: #121212 !important;
+	font-weight: bold !important;
+	color: gainsboro !important;
+	background-color: #121212 !important;
+}
+
+
+
+
