@@ -226,7 +226,7 @@
 							<div class="d-flex">
 								<div class="p-2" id="engproj-div-1-1-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
 								<div class="p-2">
-									Bi-Conic Sections Intersection<br>
+									Bi-Conic Sections Intersection Solver<br>
 									<span class="badge badge-success">Algebraic Geometry</span>
 									<span class="badge badge-success">Computational Geometry</span>
 									<span class="badge badge-success">C++</span>
@@ -490,6 +490,34 @@
 								<br><br>
 								<a href="https://github.com/melwyncarlo/Bash_Header_Design" target="_blank" class="btn btn-danger visit-source-button" role="button">Visit its Source !</a><br><br>
 								<br>
+							</div>
+						</div>
+					</div>
+
+					<div class="card" id="engproj-div-1-2">
+						<div class="card-header" id="engproj-div-1-2-1" data-toggle="collapse" data-target="#engproj-div-1-2-2">
+							<div class="d-flex">
+								<div class="p-2" id="engproj-div-1-2-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">
+									System of Bi-Linear Equations Solver<br>
+									<span class="badge badge-success">Algebraic Geometry</span>
+								</div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 2</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="engproj-div-1-2-2">
+							<div class="card-body">
+								Consider the following two generic linear equations:
+								\[a_1x + b_1y + c_1 = 0\]
+								\[a_2x + b_2y + c_2 = 0\]
+								Re-arranging to solve for the \(y\) term in the second equation, we get 
+								\[y = {{-a_2x - c_2} \over {b_2}} = -{{a_2x + c_2} \over {b_2}}\]
+								Substituting the second equation's \(y\) term in the first equation, we get 
+								\[\bbox[10px, border: 2px solid black]{x = {{b_1c_2 - b_2c_1} \over {a_1b_2 - a_2b_1}}}\]
+								Similarly, re-arranging to solve for the \(x\) term in the second equation, we get 
+								\[y = {{-a_2x - c_2} \over {b_2}} = -{{a_2x + c_2} \over {b_2}}\]
+								And then, substituting the second equation's \(x\) term in the first equation, we get 
+								\[\bbox[10px, border: 2px solid black]{y = {{a_1c_2 - a_2c_1} \over {a_2b_1 - a_1b_2}}}\]
 							</div>
 						</div>
 					</div>

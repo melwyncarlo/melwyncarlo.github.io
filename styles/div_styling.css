@@ -190,7 +190,7 @@
 	font-size: 125%;
 }
 
-#comproj-div-1-1, #comproj-div-2-1, #comproj-div-3-1, #comproj-div-4-1
+#comproj-div-1-1, #comproj-div-2-1, #comproj-div-3-1, #comproj-div-4-1, #engproj-div-1-1, #engproj-div-1-2
 {
 	margin: 0 auto;
 	padding: 0;
@@ -200,7 +200,7 @@
 	
 }
 
-#comproj-div-1-1-1, #comproj-div-2-1-1, #comproj-div-3-1-1, #comproj-div-4-1-1
+#comproj-div-1-1-1, #comproj-div-2-1-1, #comproj-div-3-1-1, #comproj-div-4-1-1, #engproj-div-1-1-1, #engproj-div-1-2-1
 {
 	display: block;
 	position: relative;
@@ -230,7 +230,7 @@
 	display: initial;
 }
 
-#comproj-div-1-1-1, #comproj-div-2-1-1, #comproj-div-3-1-1, #comproj-div-4-1-1
+#comproj-div-1-1-1, #comproj-div-2-1-1, #comproj-div-3-1-1, #comproj-div-4-1-1, #engproj-div-1-1-1, #engproj-div-1-2-1
 {
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
@@ -245,6 +245,11 @@
 	font-size: 120%;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
+}
+
+#engproj-div-1-1-2, #engproj-div-1-2-2
+{
+	background-color: whitesmoke;
 }
 
 
