@@ -616,6 +616,7 @@
 								\[\lVert \overrightarrow{CP} \rVert = \sqrt {(P_x - C_x)^2 + (P_y - C_y)^2}\]
 								\[\theta = tan^{-1} \left( \frac {P_y - C_y}{P_x - C_x} \right)\]
 								<br>
+								Note that all angles follow the counter-clockwise (anti-clockwise) direction. 
 								Now, extend the vertical line in the above illustrated right triange, such that it cuts the borders of the 
 								inner and outer rectangular areas. This is illustrated below, with the term \(L\) denoting lengths.
 								<div class="d-flex justify-content-center">
@@ -666,28 +667,29 @@
 								\[\alpha = tan^{-1} \left( \frac {U_y - C_y}{U_x - C_x} \right)\]
 
 								\[L = \begin{cases}
-								\left| P_y - C_y \right|, & \text{if} \space \space \space \space \space \space \space \space \space \space \space \space \space 
-								\alpha \lt \theta \leqslant \alpha + \frac {\pi}{2} \\
-								\left| P_y - C_y \right|, & \text{if} \space \space \pi \space \space \space \space + \alpha \lt \theta \geqslant \alpha + \frac {3 \space \cdot \space \pi}{2} \\
-								\left| P_x - C_x \right|, & \text{if} \space \space \frac {\pi}{2} \space \space \space + \alpha \lt \theta \geqslant \alpha + \pi \\
-								\left| P_x - C_x \right|, & \text{if} \space \space \frac {3 \space \cdot \space \pi}{2} + \alpha \lt \theta \geqslant \alpha
+								\left| P_y - C_y \right|, & \text{if} \space \space \space \space \space \space \space \space \space \space \space 
+								\alpha \lt \theta \leqslant \pi - \alpha \\
+								\left| P_y - C_y \right|, & \text{if} \space \space \space \space \pi + \alpha \lt \theta \leqslant 2 \pi - \alpha \\
+								\left| P_x - C_x \right|, & \text{if} \space \space \space \space \pi - \alpha \lt \theta \leqslant \pi + \alpha \\
+								\left| P_x - C_x \right|, & \text{if} \space \space 2 \pi - \alpha \lt \theta \leqslant \alpha
 								\end{cases}\]
 
 								\[L_I = \begin{cases}
-								\frac{H_I}{2}, & \text{if} \space \space \space \space \space \space \space \space \space \space \space \space \space 
-								\alpha \lt \theta \leqslant \alpha + \frac {\pi}{2} \\
-								\frac{H_I}{2}, & \text{if} \space \space \pi \space \space \space \space + \alpha \lt \theta \geqslant \alpha + \frac {3 \space \cdot \space \pi}{2} \\
-								\frac{W_I}{2}, & \text{if} \space \space \frac {\pi}{2} \space \space \space + \alpha \lt \theta \geqslant \alpha + \pi \\
-								\frac{W_I}{2}, & \text{if} \space \space \frac {3 \space \cdot \space \pi}{2} + \alpha \lt \theta \geqslant \alpha
+								\frac{H_I}{2}, & \text{if} \space \space \space \space \space \space \space \space \space \space \space 
+								\alpha \lt \theta \leqslant \pi - \alpha \\
+								\frac{H_I}{2}, & \text{if} \space \space \space \space \pi + \alpha \lt \theta \leqslant 2 \pi - \alpha \\
+								\frac{W_I}{2}, & \text{if} \space \space \space \space \pi - \alpha \lt \theta \leqslant \pi + \alpha \\
+								\frac{W_I}{2}, & \text{if} \space \space 2 \pi - \alpha \lt \theta \leqslant \alpha
 								\end{cases}\]
 
 								\[L_O = \begin{cases}
-								\frac{H_O}{2}, & \text{if} \space \space \space \space \space \space \space \space \space \space \space \space \space 
-								\alpha \lt \theta \leqslant \alpha + \frac {\pi}{2} \\
-								\frac{H_O}{2}, & \text{if} \space \space \pi \space \space \space \space + \alpha \lt \theta \geqslant \alpha + \frac {3 \space \cdot \space \pi}{2} \\
-								\frac{W_O}{2}, & \text{if} \space \space \frac {\pi}{2} \space \space \space + \alpha \lt \theta \geqslant \alpha + \pi \\
-								\frac{W_O}{2}, & \text{if} \space \space \frac {3 \space \cdot \space \pi}{2} + \alpha \lt \theta \geqslant \alpha
+								\frac{H_O}{2}, & \text{if} \space \space \space \space \space \space \space \space \space \space \space 
+								\alpha \lt \theta \leqslant \pi - \alpha \\
+								\frac{H_O}{2}, & \text{if} \space \space \space \space \pi + \alpha \lt \theta \leqslant 2 \pi - \alpha \\
+								\frac{W_O}{2}, & \text{if} \space \space \space \space \pi - \alpha \lt \theta \leqslant \pi + \alpha \\
+								\frac{W_O}{2}, & \text{if} \space \space 2 \pi - \alpha \lt \theta \leqslant \alpha
 								\end{cases}\]
+
 								<br>
 								The percentage of the mouse (cursor) position with respect to it's minimum and maximum allowable points, \(I\) and \(O\), respectively, 
 								<br>
@@ -703,7 +705,7 @@
 								\[APTI = APTI_{MIN} + \left[ ( APTI_{MAX} - APTI_{MIN}) \space \cdot \space (1.0 - PF) ) \right]\]
 
 								<br>
-								<a href="https://github.com/melwyncarlo/LibreCAD/blob/Task_44/librecad/src/lib/math/rs_math.cpp" 
+								<a href="https://github.com/melwyncarlo/LibreCAD/blob/Task_47/librecad/src/lib/actions/rs_actioninterface.cpp#L96" 
 									target="_blank" class="btn btn-danger visit-source-button" role="button">
 									Visit its Source !
 								</a>
