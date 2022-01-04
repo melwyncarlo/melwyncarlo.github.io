@@ -488,8 +488,12 @@
 								<!-- \[C_1 = c_1y_n^2 + (b_1x + e_1)y_ny_d + (a_1x^2 + d_1x + f_1)y_d^2 = 0\] -->
 
 								<br><br>
-								<a href="https://github.com/melwyncarlo/Bash_Header_Design" target="_blank" class="btn btn-danger visit-source-button" role="button">Visit its Source !</a><br><br>
+								<a href="https://github.com/melwyncarlo/LibreCAD/blob/Task_44/librecad/src/lib/math/rs_math.cpp" 
+									target="_blank" class="btn btn-danger visit-source-button" role="button">
+									Visit its Source !
+								</a>
 								<br>
+
 							</div>
 						</div>
 					</div>
@@ -518,6 +522,193 @@
 								\[y = {{-a_2x - c_2} \over {b_2}} = -{{a_2x + c_2} \over {b_2}}\]
 								And then, substituting the second equation's \(x\) term in the first equation, we get 
 								\[\bbox[10px, border: 2px solid black]{y = {{a_1c_2 - a_2c_1} \over {a_2b_1 - a_1b_2}}}\]
+							</div>
+						</div>
+					</div>
+
+					<div class="card" id="engproj-div-1-3">
+						<div class="card-header" id="engproj-div-1-3-1" data-toggle="collapse" data-target="#engproj-div-1-3-2">
+							<div class="d-flex">
+								<div class="p-2" id="engproj-div-1-3-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">
+									Auto-Panning the CAD Area<br>
+									<span class="badge badge-success">Algebraic Geometry</span>
+								</div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 3</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="engproj-div-1-3-2">
+							<div class="card-body">
+								<div class="d-flex justify-content-center">
+									<svg height="400" width="600">
+										<!-- Outer rectangle -->
+										<rect x="50" y="50" width="500" height="300" 
+											style="fill:#154081;stroke:black;stroke-width:2;fill-opacity:0.85;"/>
+										<!-- Inner rectangle -->
+										<rect x="100" y="100" width="400" height="200" 
+											style="fill:#202020;stroke:black;stroke-width:2;fill-opacity:0.75;"/>
+										<!-- Points -->
+										<circle cx="300" cy="200" r="5" fill="#f5f5f5"/>
+										<circle cx="400" cy="75"  r="5" fill="#f5f5f5"/>
+										<!-- Points text -->
+										<text x="315" y="205" fill="#f5f5f5">C (x, y)</text>
+										<text x="415" y="80"  fill="#f5f5f5">P (x, y)</text>
+									</svg>
+								</div>
+								In the figure above:
+								<ul>
+									<li>the contour of the outer (blue) rectangle represents the CAD window's drawable area.</li>
+									<li>the contour of the inner (grey) rectangle represents the unprobed area for the auto-pan function.</li>
+									<li>the blue strip area is the region where the auto-pan function is supposed to operate.</li>
+									<li>\(C (x, y)\) is the centre point of the CAD window's drawable area.</li>
+									<li>\(P (x, y)\) is an arbitrary mouse (cursor) position</li>
+									<li>\(P (x, y)\) is located within the perimeter of the unprobed area</li>
+									<li>\(P (x, y)\) is located outside the perimeter of the CAD window's drawable area</li>
+								</ul>
+								<div class="d-flex justify-content-center">
+									<svg height="400" width="600">
+										<!-- Outer rectangle -->
+										<rect x="50" y="50" width="500" height="300" 
+											style="fill:#154081;stroke:black;stroke-width:2;fill-opacity:0.85;"/>
+										<!-- Inner rectangle -->
+										<rect x="100" y="100" width="400" height="200" 
+											style="fill:#202020;stroke:black;stroke-width:2;fill-opacity:0.75;"/>
+										<!-- Points -->
+										<circle cx="300" cy="200" r="5" fill="#f5f5f5"/>
+										<circle cx="400" cy="75"  r="5" fill="#f5f5f5"/>
+										<circle cx="550" cy="50"  r="5" fill="#202020"/>
+										<!-- Points text -->
+										<text x="315" y="205" fill="#f5f5f5">C (x, y)</text>
+										<text x="415" y="80"  fill="#f5f5f5">P (x, y)</text>
+										<text x="545" y="40"  fill="#202020">U (x, y)</text>
+										<!-- Connecting line 400,75-->
+										<line x1="300" y1="200" x2="400" y2="75" stroke-dasharray="5,5" style="stroke:#f5f5f5;stroke-width:2"/>
+									</svg>
+								</div>
+								In the figure above:
+								<ul>
+									<li>an imaginary line is drawn connecting point \(C (x, y)\) and point \(P (x, y)\).</li>
+									<li>Point \(U (x, y)\) is the CAD drawable area's upper-right corner.</li>
+								</ul>
+								<br><br>
+								Considering the two points \(C\) and \(P\), a right triangle can be formed, as illustrated below.
+								<div class="d-flex justify-content-center">
+									<svg height="200" width="200">
+										<!-- Points -->
+										<circle cx="160" cy="50"  r="5" fill="#202020"/>
+										<circle cx="70"  cy="150" r="5" fill="#202020"/>
+										<!-- Points text -->
+										<text x="135" y="30"  fill="#202020">P (x, y)</text>
+										<text x="5"   y="150" fill="#202020">C (x, y)</text>
+										<!-- Connecting lines -->
+										<line x1="70"  y1="150" x2="160" y2="50"  stroke="#202020" stroke-width="2" stroke-dasharray="5,5"/>
+										<line x1="70"  y1="150" x2="160" y2="150" stroke="#202020" stroke-width="2"/>
+										<line x1="160" y1="150" x2="160" y2="50"  stroke="#202020" stroke-width="2"/>
+										<!-- Right angle markings -->
+										<polyline points="145,150 145,135 160,135" stroke="#202020" stroke-width="2" fill="none"/>
+										<!-- Theta angle markings -->
+										<path d="M95,150  A30,30 0 0 0 87,130"  stroke="#202020" stroke-width="2" fill="none"/>
+										<!-- Theta angle text -->
+										<text x="100" y="140" fill="#202020">&theta;</text>
+									</svg>
+								</div>
+								The vector \(\overrightarrow{CP}\) has a magnitude, \(\lVert \overrightarrow{CP} \rVert\), and an angle, \(\theta\).
+								\[\lVert \overrightarrow{CP} \rVert = \sqrt {(P_x - C_x)^2 + (P_y - C_y)^2}\]
+								\[\theta = tan^{-1} \left( \frac {P_y - C_y}{P_x - C_x} \right)\]
+								<br>
+								Now, extend the vertical line in the above illustrated right triange, such that it cuts the borders of the 
+								inner and outer rectangular areas. This is illustrated below, with the term \(L\) denoting lengths.
+								<div class="d-flex justify-content-center">
+									<svg height="250" width="400">
+										<!-- Points -->
+										<circle cx="160" cy="100" r="5" fill="#202020"/>
+										<circle cx="70"  cy="200" r="5" fill="#202020"/>
+										<!-- Points text -->
+										<text x="100" y="100" fill="#202020">P (x, y)</text>
+										<text x="5"   y="200" fill="#202020">C (x, y)</text>
+										<!-- Connecting lines -->
+										<line x1="70"  y1="200" x2="160" y2="100" stroke="#202020" stroke-width="2" stroke-dasharray="5,5"/>
+										<line x1="70"  y1="200" x2="160" y2="200" stroke="#202020" stroke-width="2"/>
+										<line x1="160" y1="200" x2="160" y2="50"  stroke="#202020" stroke-width="2"/>
+										<line x1="150" y1="50"  x2="170" y2="50"  stroke="#202020" stroke-width="2"/>
+										<line x1="150" y1="150" x2="170" y2="150" stroke="#202020" stroke-width="2"/>
+										<!-- Right angle markings -->
+										<polyline points="145,200 145,185 160,185" stroke="#202020" stroke-width="2" fill="none"/>
+										<!-- Theta angle markings -->
+										<path d="M95,200  A30,30 0 0 0 87,180"  stroke="#202020" stroke-width="2" fill="none"/>
+										<!-- Theta angle text -->
+										<text x="100" y="190" fill="#202020">&theta;</text>
+										<!-- Heights upper arrows -->
+										<polyline points="185,155 190,150 195,155" stroke="#202020" stroke-width="2" fill="none"/>
+										<polyline points="235,105 240,100 245,105" stroke="#202020" stroke-width="2" fill="none"/>
+										<polyline points="285,55  290,50  295,55"  stroke="#202020" stroke-width="2" fill="none"/>
+										<!-- Heights lower arrows -->
+										<polyline points="185,195 190,200 195,195" stroke="#202020" stroke-width="2" fill="none"/>
+										<polyline points="235,195 240,200 245,195" stroke="#202020" stroke-width="2" fill="none"/>
+										<polyline points="285,195 290,200 295,195" stroke="#202020" stroke-width="2" fill="none"/>
+										<!-- Heights lines -->
+										<line x1="190" y1="200" x2="190" y2="150" stroke="#202020" stroke-width="2"/>
+										<line x1="240" y1="200" x2="240" y2="100" stroke="#202020" stroke-width="2"/>
+										<line x1="290" y1="200" x2="290" y2="50"  stroke="#202020" stroke-width="2"/>
+										<!-- Heights text -->
+										<text x="200" y="175" fill="#202020">L<tspan baseline-shift="sub" font-size="75%">I</tspan></text>
+										<text x="250" y="150" fill="#202020">L</tspan></text>
+										<text x="300" y="100" fill="#202020">L<tspan baseline-shift="sub" font-size="75%">O</tspan></text>
+									</svg>
+								</div>
+								The dimensions of the CAD window's drawable area and the unprobed area are fixed, that is, 
+								they are definitely known during a given instance of the function's operation. 
+								So, let \(W_I\) and \(W_O\) denote their respective widths, 
+								and let \(H_I\) and \(H_O\) denote their respective heights, 
+								where the subscripts \(I\) and \(O\) mean <i>inner</i> and <i>outer</i>, respectively.
+								<br><br>
+								Let \(\alpha\), a constant, be the CAD drawable area's quarter angle, brought about by the vector, \(\overrightarrow{CU}\). Then, 
+								\[\alpha = tan^{-1} \left( \frac {U_y - C_y}{U_x - C_x} \right)\]
+
+								\[L = \begin{cases}
+								\left| P_y - C_y \right|, & \text{if} \space \space \space \space \space \space \space \space \space \space \space \space \space 
+								\alpha \lt \theta \leqslant \alpha + \frac {\pi}{2} \\
+								\left| P_y - C_y \right|, & \text{if} \space \space \pi \space \space \space \space + \alpha \lt \theta \geqslant \alpha + \frac {3 \space \cdot \space \pi}{2} \\
+								\left| P_x - C_x \right|, & \text{if} \space \space \frac {\pi}{2} \space \space \space + \alpha \lt \theta \geqslant \alpha + \pi \\
+								\left| P_x - C_x \right|, & \text{if} \space \space \frac {3 \space \cdot \space \pi}{2} + \alpha \lt \theta \geqslant \alpha
+								\end{cases}\]
+
+								\[L_I = \begin{cases}
+								\frac{H_I}{2}, & \text{if} \space \space \space \space \space \space \space \space \space \space \space \space \space 
+								\alpha \lt \theta \leqslant \alpha + \frac {\pi}{2} \\
+								\frac{H_I}{2}, & \text{if} \space \space \pi \space \space \space \space + \alpha \lt \theta \geqslant \alpha + \frac {3 \space \cdot \space \pi}{2} \\
+								\frac{W_I}{2}, & \text{if} \space \space \frac {\pi}{2} \space \space \space + \alpha \lt \theta \geqslant \alpha + \pi \\
+								\frac{W_I}{2}, & \text{if} \space \space \frac {3 \space \cdot \space \pi}{2} + \alpha \lt \theta \geqslant \alpha
+								\end{cases}\]
+
+								\[L_O = \begin{cases}
+								\frac{H_O}{2}, & \text{if} \space \space \space \space \space \space \space \space \space \space \space \space \space 
+								\alpha \lt \theta \leqslant \alpha + \frac {\pi}{2} \\
+								\frac{H_O}{2}, & \text{if} \space \space \pi \space \space \space \space + \alpha \lt \theta \geqslant \alpha + \frac {3 \space \cdot \space \pi}{2} \\
+								\frac{W_O}{2}, & \text{if} \space \space \frac {\pi}{2} \space \space \space + \alpha \lt \theta \geqslant \alpha + \pi \\
+								\frac{W_O}{2}, & \text{if} \space \space \frac {3 \space \cdot \space \pi}{2} + \alpha \lt \theta \geqslant \alpha
+								\end{cases}\]
+								<br>
+								The percentage of the mouse (cursor) position with respect to it's minimum and maximum allowable points, \(I\) and \(O\), respectively, 
+								<br>
+								is calculated as follows.
+								\[PF = \frac {L - L_I} {L_O - L_I}\]
+								<br>
+								The pan displacement/offset vector, in the polar coordinate system, is \((R, \theta)\), 
+								where \(R\), a constant, is the pan offset magnitude.
+								<br><br>
+								For auto-panning, the pan operation is periodically repeated. The interval period is inversely proportional 
+								to the required speed of the auto-pan operation. The auto-pan timer interval, \(APTI\), is calculated as follows, 
+								where \(APTI_{MIN}\) and \(APTI_{MAX}\), are its minimum and maximum constants.
+								\[APTI = APTI_{MIN} + \left[ ( APTI_{MAX} - APTI_{MIN}) \space \cdot \space (1.0 - PF) ) \right]\]
+
+								<br>
+								<a href="https://github.com/melwyncarlo/LibreCAD/blob/Task_44/librecad/src/lib/math/rs_math.cpp" 
+									target="_blank" class="btn btn-danger visit-source-button" role="button">
+									Visit its Source !
+								</a>
+								<br>
+
 							</div>
 						</div>
 					</div>
@@ -788,6 +979,10 @@
 
 			</div>
 
+		</div>
+
+		<div class="d-flex justify-content-center">
+			Copyright &copy; 2021-2022 Melwyn Francis Carlo
 		</div>
 
 	</body>
