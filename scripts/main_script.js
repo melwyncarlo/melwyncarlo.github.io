@@ -50,7 +50,7 @@ function tab_clicked(tabNameInput)
 	var navlinkCol = ["black", "black", "black", "grey"];
 	$('.tab-content').css('visibility', 'hidden');
 	$('.nav-item').css('cssText', 'background-color: #202020 !important');
-	$('#div1').css('background-color', '#151515');\
+	$('#div1').css('background-color', '#151515');
 
 	window.setTimeout(function()
 	{

@@ -503,7 +503,7 @@
 							<div class="d-flex">
 								<div class="p-2" id="engproj-div-1-2-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
 								<div class="p-2">
-									System of Bi-Linear Equations Solver<br>
+									System of Bi-Linear Simultaneous Equations Solver<br>
 									<span class="badge badge-success">Algebraic Geometry</span>
 								</div>
 								<div class="p-2 ml-auto proj-numbering"><h1># 2</h1></div>
@@ -511,7 +511,7 @@
 						</div>
 						<div class="collapse" id="engproj-div-1-2-2">
 							<div class="card-body">
-								Consider the following two generic linear equations:
+								Consider the following two generic linear equations in two variables:
 								\[a_1x + b_1y + c_1 = 0\]
 								\[a_2x + b_2y + c_2 = 0\]
 								Re-arranging to solve for the \(y\) term in the second equation, we get 
@@ -522,6 +522,12 @@
 								\[y = {{-a_2x - c_2} \over {b_2}} = -{{a_2x + c_2} \over {b_2}}\]
 								And then, substituting the second equation's \(x\) term in the first equation, we get 
 								\[\bbox[10px, border: 2px solid black]{y = {{a_1c_2 - a_2c_1} \over {a_2b_1 - a_1b_2}}}\]
+								Subject to the following conditions:
+								<ul>
+									<li>\((a_1 \neq 0) \land (a_2 \neq 0)\)</li>
+									<li>\((b_1 \neq 0) \land (b_2 \neq 0)\)</li>
+									<li>\((a_1b_2 \neq a_2b_1)\)</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -531,13 +537,203 @@
 							<div class="d-flex">
 								<div class="p-2" id="engproj-div-1-3-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
 								<div class="p-2">
-									Auto-Panning the CAD Area<br>
+									System of Tri-Linear Simultaneous Equations Solver<br>
 									<span class="badge badge-success">Algebraic Geometry</span>
 								</div>
 								<div class="p-2 ml-auto proj-numbering"><h1># 3</h1></div>
 							</div>
 						</div>
 						<div class="collapse" id="engproj-div-1-3-2">
+							<div class="card-body">
+								Consider the following three generic linear equations in three variables:
+								\[a_1x + b_1y + c_1z + d_1 = 0\]
+								\[a_2x + b_2y + c_2z + d_2 = 0\]
+								\[a_3x + b_3y + c_3z + d_3 = 0\]
+								Using Cramer's rule,
+								\[x = \frac {D_x}{D}\]
+								\[y = \frac {D_y}{D}\]
+								\[z = \frac {D_z}{D}\]
+								Subject to the following condition: 
+								<ul>
+									<li>\(D \neq 0\)</li>
+								</ul>
+								<br>
+								The \(D\) terms are determinants, and they are defined as follows.
+								\[\eqalign{
+								D &= \begin{vmatrix}
+								a_1 & b_1 & c_1 \\ 
+								a_2 & b_2 & c_2 \\ 
+								a_3 & b_3 & c_3 
+								\end{vmatrix} \cr 
+								&= a_1(b_2c_3 - b_3c_2) - b_1(a_2c_3 - a_3c_2) + c_1(a_2b_3 - a_3b_2) \cr 
+								&= a_1b_2c_3 - a_1b_3c_2 - a_2b_1c_3 + a_3b_1c_2 + a_2b_3c_1 - a_3b_2c_1 \cr \cr 
+								D_x &= \begin{vmatrix}
+								-d_1 & b_1 & c_1 \\ 
+								-d_2 & b_2 & c_2 \\ 
+								-d_3 & b_3 & c_3 
+								\end{vmatrix} \cr 
+								&= -d_1(b_2c_3 - b_3c_2) - b_1(-c_3d_2 + c_2d_3) + c_1(-b_3d_2 + b_2d_3) \cr 
+								&= b_1c_3d_2 - b_1c_2d_3 + b_2c_1d_3 - b_2c_3d_1 + b_3c_2d_1 - b_3c_1d_2 \cr \cr 
+								D_y &= \begin{vmatrix}
+								a_1 & -d_1 & c_1 \\ 
+								a_2 & -d_2 & c_2 \\ 
+								a_3 & -d_3 & c_3 
+								\end{vmatrix} \cr 
+								&= a_1(-c_3d_2 + c_2d_3) + d_1(a_2c_3 - a_3c_2) + c_1(-a_2d_3 + a_3d_2) \cr 
+								&= a_1c_2d_3 - a_1c_3d_2 + a_2c_3d_1 - a_2c_1d_3 + a_3c_1d_2 - a_3c_2d_1 \cr \cr 
+								D_z &= \begin{vmatrix}
+								a_1 & b_1 & -d_1 \\ 
+								a_2 & b_2 & -d_2 \\ 
+								a_3 & b_3 & -d_3 
+								\end{vmatrix} \cr 
+								&= a_1(-b_2d_3 + b_3d_2) - b_1(-a_2d_3 + a_3d_2) - d_1(a_2b_3 - a_3b_2) \cr 
+								&= a_1b_3d_2 - a_1b_2d_3 + a_2b_1d_3 - a_2b_3d_1 + a_3b_2d_1 - a_3b_1d_2 
+								}\]
+								<br>
+								Subject to the following conditions: 
+								<ul>
+									<li>\(D_{i, *} \neq 0\)</li>
+									<li>\(D_{*, j} \neq 0\)</li>
+									<li>\(D_{1, *} \neq D_{2, *}\)</li>
+									<li>\(D_{1, *} \neq D_{3, *}\)</li>
+									<li>\(D_{2, *} \neq D_{3, *}\)</li>
+									<li>\(D_{*, 1} \neq D_{*, 2}\)</li>
+									<li>\(D_{*, 1} \neq D_{*, 3}\)</li>
+									<li>\(D_{*, 2} \neq D_{*, 3}\)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="card" id="engproj-div-1-4">
+						<div class="card-header" id="engproj-div-1-4-1" data-toggle="collapse" data-target="#engproj-div-1-4-2">
+							<div class="d-flex">
+								<div class="p-2" id="engproj-div-1-4-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">
+									Equating a Transformable Rectangle<br>
+									<span class="badge badge-success">Algebraic Geometry</span>
+								</div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 4</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="engproj-div-1-4-2">
+							<div class="card-body">
+								Consider equations of the following form (where \(c\) is an arbitrary constant):
+								\[\bbox[10px, border: 2px solid black]{x^k + y^k = c^k}\]
+								<br><br>
+
+								<div class="container">
+									<div class="row justify-content-md-center">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+										<div class="col-md-auto">
+												<img src="images/engproj_04_img_1.svg" width="200" height="200"><br>
+												<u>FIGURE:</u> \( \space \space k = 1 \space \space \) produces a line.
+										</div>&nbsp; &nbsp; 
+										<div class="col-md-auto">
+												<img src="images/engproj_04_img_2.svg" width="200" height="200"><br>
+												<u>FIGURE:</u> \( \space \space k = 2 \space \space \) produces a circle.
+										</div>
+									</div>
+									<br><br>
+									<div class="row justify-content-md-center">
+										<div class="col-md-auto">
+												<img src="images/engproj_04_img_3.svg" width="200" height="200"><br>
+												<u>FIGURE:</u> \( \space \space k = \frac{2}{3} = 0.\dot{6} \approx 0.6667 \space \space \) 
+												<br>
+												produces an &nbsp; <a href="https://en.wikipedia.org/wiki/Astroid" target="_blank">astroid</a>.
+										</div>
+										<div class="col-md-auto">
+												<img src="images/engproj_04_img_4.svg" width="200" height="200"><br>
+												<u>FIGURE:</u> \( \space \space k \to \infty \space \space \)<br>produces a square.
+										</div>
+									</div>
+									<br><br>
+								</div>
+								<br>
+
+								<u>NOTE</u> that, with respect to the local origin:
+								<ul>
+									<li>\(0 < k < 1\) produces a concave curve</li>
+									<li>\(k > 1 \qquad \) produces a convex curve</li>
+								</ul>
+								<br>
+								For a <i>rectangle</i> (which is a generic form of a square), or a <i>square</i> (which is a specific form of a rectangle), 
+								the resolution of its corners is proportional to the \(k\) value. In the above image, \(k = 1000\) was used; 
+								\(k = 100\) leads to slightly rounded corners.
+								<br><br>
+
+								Adding horizontal and vertical translations, \(t_x\) and \(t_y\), respectively, 
+								modifies the aforementioned equation as follows. 
+								\[\bbox[10px, border: 2px solid black]{(x - t_x)^k + (y - t_y)^k = c^k}\]
+								Positive values translate in the rightward and upward directions, respectively, 
+								and negative values translate in the leftward and downward directions, respectively. 
+
+								Next, adding horizontal and vertical scale factors, \(s_x\) and \(s_y\), respectively, modifies the equation independently as follows. 
+								\[\bbox[10px, border: 2px solid black]{ \left( \frac {x}{s_x} \right) ^k + \left( \frac {y}{s_y} \right) ^k = c^k}\]
+								The scale factors vary proportionally to the required scaling, in either direction. <u>NOTE</u> that, the arbitrary constant, \(c\), 
+								can also act as a scale factor that also varies proportionally to the required scaling; however, it scales equally 
+								in the horizontal and vertical axes. So, setting \(s_x = f\) and \(s_y = f\) is the same as setting \(c = f\), 
+								where \(f\) is an arbitrary scale factor.
+
+								Finally, adding rotation, \(\theta\), by applying the two-dimensional rotation matrix, modifies the equation independently as follows. 
+								\[\bbox[10px, border: 2px solid black]{(x \cdot cos(\theta) - y \cdot sin(\theta))^k + (x \cdot sin(\theta) + y \cdot cos(\theta))^k = c^k}\]
+								<br>
+
+								In the above equation, the angle, \(\theta\), is in the clockwise direction; 
+								for counter-clockwise (anti-clockwise) rotation, simply negate the angle, \(\theta\), as \(-\theta\), 
+								thereby modifying the above equation as follows.
+								<br>
+								\[\bbox[10px, border: 2px solid black]{(x \cdot cos(\theta) + y \cdot sin(\theta))^k + (y \cdot cos(\theta) - x \cdot sin(\theta))^k = c^k}\]
+								<br>
+
+								Now, aggregating the above transformations into a single, all-encompassing equation, we get the following equation.
+
+								<br><br>
+								\[\bbox[10px, border: 2px solid black]
+								{ \left\{ \frac { \left[ (x - t_x) \cdot cos(\theta) \right] + \left[ (y - t_y) \cdot sin(\theta) \right] } {s_x} \right\} ^ k + 
+								  \left\{ \frac { \left[ (y - t_y) \cdot cos(\theta) \right] - \left[ (x - t_x) \cdot sin(\theta) \right] } {s_y} \right\} ^ k = c^k}\]
+								<br>
+								\[\bbox[10px, border: 2px solid black]
+								{ s_y^k \cdot \left\{ \left[ (x - t_x) \cdot cos(\theta) \right] + \left[ (y - t_y) \cdot sin(\theta) \right] \right\} ^ k + 
+								  s_x^k \cdot \left\{ \left[ (y - t_y) \cdot cos(\theta) \right] - \left[ (x - t_x) \cdot sin(\theta) \right] \right\} ^ k =c^{k}s_x^{k}s_y^{k}}\]
+								<br>
+
+								This final equation can be used to <i>create</i> and <i>transform</i> a <i>generic rectangle</i>. 
+								Illustrated below is a two-by-one \( (2 \times 1) \) rectangle, translated rightward and upward by two units each \( (+2, +2) \), 
+								and rotated clockwise by forty-five degrees \( \left( -45^{\circ} \space \text{or} \space -\frac{\pi}{4}^c 
+								\space \text{or} \space +\frac{7\pi}{4}^c \right) \).
+
+								<br><br>
+								\[\bbox[10px, border: 2px solid black]
+								{ \left\{ \frac { \left[ (x - 2) \cdot cos \left( - \frac{\pi}{4} \right) \right] + \left[ (y - 2) \cdot sin \left( - \frac{\pi}{4} \right) \right] } {2} \right\} ^ {100} + 
+								  \left\{ \left[ (y - 2) \cdot cos \left( - \frac{\pi}{4} \right) \right] - \left[ (x - 2) \cdot sin \left( - \frac{\pi}{4} \right) \right] \right\} ^ {100} = 1}\]
+								<br>
+								\[\bbox[10px, border: 2px solid black]
+								{ \left[ \space 0.35355 (x - 2) \space - \space 0.35355 (y - 2) \space \right] ^ {100} + 
+								  \left[ \space 0.7071  (x - 2) \space + \space 0.7071  (y - 2) \space \right] ^ {100} = 1}\]
+								<br><br>
+
+								<div class="d-flex justify-content-center">
+									<img src="images/engproj_04_img_5.svg" width="250" height="250">
+								</div>
+								<br><br>
+
+								The final equation can further be modified to accommodate a <i>generic quadrilateral</i>.
+							</div>
+						</div>
+					</div>
+
+					<div class="card" id="engproj-div-1-5">
+						<div class="card-header" id="engproj-div-1-5-1" data-toggle="collapse" data-target="#engproj-div-1-5-2">
+							<div class="d-flex">
+								<div class="p-2" id="engproj-div-1-5-1-arrow"><h1> &nbsp;&nbsp;⌄ &nbsp;&nbsp;</h1></div>
+								<div class="p-2">
+									Auto-Panning the CAD Area<br>
+									<span class="badge badge-success">Computational Geometry</span>
+								</div>
+								<div class="p-2 ml-auto proj-numbering"><h1># 5</h1></div>
+							</div>
+						</div>
+						<div class="collapse" id="engproj-div-1-5-2">
 							<div class="card-body">
 								<div class="d-flex justify-content-center">
 									<svg height="400" width="600">
@@ -693,7 +889,7 @@
 								<br>
 								The percentage of the mouse (cursor) position with respect to it's minimum and maximum allowable points, \(I\) and \(O\), respectively, 
 								<br>
-								is calculated as follows.
+								(called the <i>Percentage Factor</i>, or \(PF\)) is calculated as follows.
 								\[PF = \frac {L - L_I} {L_O - L_I}\]
 								<br>
 								The pan displacement/offset vector, in the polar coordinate system, is \((R, \theta)\), 
@@ -701,7 +897,7 @@
 								<br><br>
 								For auto-panning, the pan operation is periodically repeated. The interval period is inversely proportional 
 								to the required speed of the auto-pan operation. The auto-pan timer interval, \(APTI\), is calculated as follows, 
-								where \(APTI_{MIN}\) and \(APTI_{MAX}\), are its minimum and maximum constants.
+								where \(APTI_{MIN}\) and \(APTI_{MAX}\) are its minimum and maximum constants.
 								\[APTI = APTI_{MIN} + \left[ ( APTI_{MAX} - APTI_{MIN}) \space \cdot \space (1.0 - PF) ) \right]\]
 
 								<br>
