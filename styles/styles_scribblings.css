@@ -1,0 +1,113 @@
+/* Copyright (c) 2025 Melwyn Francis Carlo */
+
+@media only screen and (orientation: landscape) {
+    .card {
+        max-width: 50vw;
+    }
+}
+
+.card {
+    margin-bottom: 5px;
+}
+
+.card-header {
+    cursor: pointer;
+}
+
+.card-header > * {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#main-container {
+    background-color: #a18a45;
+}
+
+#image-modal-image {
+    object-fit: contain !important;
+}
+
+img:not(#image-modal-image) {
+    cursor: zoom-in !important;
+}
+
+.youtube-video {
+    width: 100% !important;
+    aspect-ratio: 21/9 !important;
+}
+
+.normal-svg {
+    max-width: 100% !important;
+}
+
+.smaller-svg {
+    max-width: 75% !important;
+}
+
+.larger-svg-1 {
+    width: 100% !important;
+}
+
+.larger-svg-2 {
+    width: 60% !important;
+}
+
+.larger-svg-3 {
+    width: 80% !important;
+}
+
+.graph, .graph-lone {
+    aspect-ratio: 1 !important;
+    margin-bottom: 3%;
+}
+
+.graph {
+    width: 100% !important;
+}
+
+.graph-lone {
+    width: 50% !important;
+}
+
+.graph-container-1 {
+    padding: 5% !important;
+}
+
+.graph-container-2 {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-bottom: 5% !important;
+}
+
+.table-header {
+    text-align: center;
+}
+
+.duolingo {
+    width: 25% !important;
+}
+
+#duolingo_2 {
+    margin-left: 1% !important;
+}
+
+#wiring-diagrams-carousel img {
+    margin: auto !important;
+    object-fit: contain !important;
+}
+
+@media only screen and (orientation: landscape) {
+    #wiring-diagrams-carousel img {
+        height: 60vh !important;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #wiring-diagrams-carousel img {
+        width: 100% !important;
+        aspect-ratio: 1 !important;
+    }
+}

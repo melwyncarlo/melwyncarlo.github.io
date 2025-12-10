@@ -1,0 +1,36 @@
+/* Copyright (c) 2025 Melwyn Francis Carlo */
+
+@media only screen and (orientation: landscape) {
+    .card {
+        max-width: 50vw;
+    }
+    img:not(#image-modal-image) {
+        width: 45% !important;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    img:not(#image-modal-image) {
+        width: 90% !important;
+    }
+}
+
+#image-modal-image {
+    object-fit: contain !important;
+}
+
+img:not(#image-modal-image) {
+    cursor: zoom-in !important;
+}
+
+.card-header {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#main-container {
+    background-color: #4d64b3;
+}

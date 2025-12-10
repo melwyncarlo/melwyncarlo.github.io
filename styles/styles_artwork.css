@@ -1,0 +1,39 @@
+/* Copyright (c) 2025 Melwyn Francis Carlo */
+
+@media only screen and (orientation: landscape) {
+    .card {
+        max-width: 50vw;
+    }
+}
+
+.carousel-inner {
+    max-height: 60vh !important;
+    aspect-ratio: 2 !important;
+}
+
+#image-modal-image {
+    object-fit: contain !important;
+}
+
+#digital-art-carousel-image, #sketchwork-carousel-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    cursor: zoom-in !important;
+}
+
+.card-body {
+    background-color: #eeeeee;
+}
+
+#main-container {
+    background-color: #8f3d3d;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#writings-hide-show-text {
+    cursor: pointer;
+}
