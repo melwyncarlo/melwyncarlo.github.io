@@ -130,11 +130,13 @@ window.onload = function() {
     const ANIMATION_VIDEO_LINKS = [
         'https://www.youtube.com/embed/04YqjtBeuok',
         'https://www.youtube.com/embed/qroVKXhB2Qg',
+        'https://www.youtube.com/embed/dw5W15Gk4Q0',
         'https://www.youtube.com/embed/Z0Wwv3smCnc'
     ];
     const ANIMATION_VIDEO_TITLES = [
         'A Baby&#39;s Typical Sunday - Introduction',
         'Alien teaches Abacus - Introduction',
+        'The Smiley Wiley Show - Introduction',
         'Animated characters for my Android game'
     ];
     const animation_carousel_id = { value: 1 };
